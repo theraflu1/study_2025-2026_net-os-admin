@@ -1,0 +1,145 @@
+<h1 id="цель-работы">Цель работы</h1>
+<p>Целью данной работы является приобретение практических навыков
+установки Rocky Linux на виртуальную машину с помощью инструмента
+Vagrant</p>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p>Для начала создадим папку с инициалами, в которой будет 2 папки,
+показанные на фото (рис. <span class="citation"
+data-cites="fig:001">[-@fig:001]</span>).</p>
+<figure id="fig:001">
+<img src="image/1.png" alt="Создание папок" />
+<figcaption aria-hidden="true">Создание папок</figcaption>
+</figure>
+<p>Поместим заранее скачаный образ в первую папку (рис. <span
+class="citation" data-cites="fig:002">[-@fig:002]</span>).</p>
+<figure id="fig:002">
+<img src="image/2.png" alt="Образ диска" />
+<figcaption aria-hidden="true">Образ диска</figcaption>
+</figure>
+<p>Создадим в той же папке файл, содержание которого перечислено на
+экране. Тут описано, как будет создаваться образ для vagrant (рис. <span
+class="citation" data-cites="fig:003">[-@fig:003]</span>).</p>
+<figure id="fig:003">
+<img src="image/3.png" alt="vagrant-rocky.pkr.hd" />
+<figcaption aria-hidden="true">vagrant-rocky.pkr.hd</figcaption>
+</figure>
+<p>Создадим подпапку http, в которой поместим файл следующего содержания
+с конфигурацией (рис. <span class="citation"
+data-cites="fig:004">[-@fig:004]</span>).</p>
+<figure id="fig:004">
+<img src="image/4.png" alt="Файл конфигурации" />
+<figcaption aria-hidden="true">Файл конфигурации</figcaption>
+</figure>
+<p>Теперь добавим vagrantfile в папку vagrant (рис. <span
+class="citation" data-cites="fig:005">[-@fig:005]</span>).</p>
+<figure id="fig:005">
+<img src="image/5.png" alt="Vagrantfile" />
+<figcaption aria-hidden="true">Vagrantfile</figcaption>
+</figure>
+<p>Содержимое папки будет выглядеть так. Теперь создадим тут папку
+provision (рис. <span class="citation"
+data-cites="fig:006">[-@fig:006]</span>).</p>
+<figure id="fig:006">
+<img src="image/6.png" alt="Каталог Vagrant" />
+<figcaption aria-hidden="true">Каталог Vagrant</figcaption>
+</figure>
+<p>В этой папке мы создадим 3 подпапки, показаные на фото (рис. <span
+class="citation" data-cites="fig:007">[-@fig:007]</span>).</p>
+<figure id="fig:007">
+<img src="image/7.png" alt="Создание подпапок" />
+<figcaption aria-hidden="true">Создание подпапок</figcaption>
+</figure>
+<p>В каждую папку добавим файл заглушку со следующим содержанием (рис.
+<span class="citation" data-cites="fig:008">[-@fig:008]</span>).</p>
+<figure id="fig:008">
+<img src="image/8.png" alt="Файл заглушка" />
+<figcaption aria-hidden="true">Файл заглушка</figcaption>
+</figure>
+<p>В папку default добавим следующий файл (рис. <span class="citation"
+data-cites="fig:009">[-@fig:009]</span>).</p>
+<figure id="fig:009">
+<img src="image/9.png" alt="01-user.sh" />
+<figcaption aria-hidden="true">01-user.sh</figcaption>
+</figure>
+<p>И этот файл (рис. <span class="citation"
+data-cites="fig:010">[-@fig:010]</span>).</p>
+<figure id="fig:010">
+<img src="image/10.png" alt="01-hostname.sh" />
+<figcaption aria-hidden="true">01-hostname.sh</figcaption>
+</figure>
+<p>Добавим также 2 файла в папку сервера. Первый файл (рис. <span
+class="citation" data-cites="fig:011">[-@fig:011]</span>).</p>
+<figure id="fig:011">
+<img src="image/11.png" alt="первый файл" />
+<figcaption aria-hidden="true">первый файл</figcaption>
+</figure>
+<p>И второй файл (рис. <span class="citation"
+data-cites="fig:012">[-@fig:012]</span>).</p>
+<figure id="fig:012">
+<img src="image/12.png" alt="Второй файл" />
+<figcaption aria-hidden="true">Второй файл</figcaption>
+</figure>
+<p>Теперь инициализируем packer (рис. <span class="citation"
+data-cites="fig:013">[-@fig:013]</span>).</p>
+<figure id="fig:013">
+<img src="image/13.png" alt="инициализируем packer" />
+<figcaption aria-hidden="true">инициализируем packer</figcaption>
+</figure>
+<p>И сделаем билд образа (рис. <span class="citation"
+data-cites="fig:014">[-@fig:014]</span>).</p>
+<figure id="fig:014">
+<img src="image/14.png" alt="билд образа" />
+<figcaption aria-hidden="true">билд образа</figcaption>
+</figure>
+<p>После этого добавим его в vagrant (рис. <span class="citation"
+data-cites="fig:015">[-@fig:015]</span>).</p>
+<figure id="fig:015">
+<img src="image/15.png" alt="добавление образа в vagrant" />
+<figcaption aria-hidden="true">добавление образа в vagrant</figcaption>
+</figure>
+<p>Запустим через вагрант ВМ сервера (рис. <span class="citation"
+data-cites="fig:016">[-@fig:016]</span>).</p>
+<figure id="fig:016">
+<img src="image/16.png" alt="запуск сервера" />
+<figcaption aria-hidden="true">запуск сервера</figcaption>
+</figure>
+<p>И запустим еще клиент (рис. <span class="citation"
+data-cites="fig:017">[-@fig:017]</span>).</p>
+<figure id="fig:017">
+<img src="image/17.png" alt="запуск клиента" />
+<figcaption aria-hidden="true">запуск клиента</figcaption>
+</figure>
+<p>Убедимся, что они оба работают, через графический интерфейс. Войдём
+туда под пользователем vagrant (рис. <span class="citation"
+data-cites="fig:018">[-@fig:018]</span>).</p>
+<figure id="fig:018">
+<img src="image/18.png" alt="Вход через GUI" />
+<figcaption aria-hidden="true">Вход через GUI</figcaption>
+</figure>
+<p>Теперь попробуем зайти на сервер через ssh, после чего авторизируемся
+от имени собственного пользователя, и отключимся (рис. <span
+class="citation" data-cites="fig:019">[-@fig:019]</span>).</p>
+<figure id="fig:019">
+<img src="image/19.png" alt="Логин на сервере" />
+<figcaption aria-hidden="true">Логин на сервере</figcaption>
+</figure>
+<p>Сделаем то же самое для клиента (рис. <span class="citation"
+data-cites="fig:020">[-@fig:020]</span>).</p>
+<figure id="fig:020">
+<img src="image/20.png" alt="Логин на клиенте" />
+<figcaption aria-hidden="true">Логин на клиенте</figcaption>
+</figure>
+<p>Выключим обе машины (рис. <span class="citation"
+data-cites="fig:021">[-@fig:021]</span>).</p>
+<figure id="fig:021">
+<img src="image/21.png" alt="Завершение работы" />
+<figcaption aria-hidden="true">Завершение работы</figcaption>
+</figure>
+<h1 id="выводы">Выводы</h1>
+<p>В результате выполнения лабораторной работы были получены навыки
+работы с vagrant</p>
+<h1 class="unnumbered" id="список-литературы">Список литературы</h1>
+<div id="refs" role="list">
+
+</div>
