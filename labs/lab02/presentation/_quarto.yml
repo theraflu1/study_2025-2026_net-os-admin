@@ -15,7 +15,6 @@ crossref:
 format:
 ### Pdf output format
   beamer:
-    pdf-engine: xelatex
     toc: true
     toc-title: Содержание
     number-sections: true
@@ -26,10 +25,15 @@ format:
     section-titles: true
     incremental: true
     navigation: horizontal
+    theme: Montpellier
+    colortheme: seagull
+    # logo: _resources/image/logo_rudn.png
+    # theme: metropolis
+    # themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
     csquotes: true
     indent: true
-    include-in-header:
-      - file: _assets/beamer.tex
+    header-includes: |
+      \usepackage{libertine}
 #### Language
     babel-lang: russian
     babel-otherlangs: english
@@ -42,3 +46,4 @@ format:
     output-ext: html
     theme: beige
     logo: _resources/image/logo_rudn.png
+
